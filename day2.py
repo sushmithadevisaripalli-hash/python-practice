@@ -30,6 +30,12 @@ bill = float(input("Enter the bill amount: $"))
 tip_percent = float(input("Enter tip percentage (e.g. 15): "))
 people = int(input("How many people are splitting? "))
 
+
+if people <= 0:
+    print("Number of people must be at least 1.")
+else:
+    print("Splitting between " + str(people) + " people. Good to go!")
+
 tip_amount = bill * (tip_percent / 100)
 total = bill + tip_amount
 per_person = total / people
